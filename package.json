@@ -1,0 +1,25 @@
+{
+  "name": "cfg-app",
+  "version": "1.0.0",
+  "description": "cfg app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cfgsept2021/team-20.git"
+  },
+  "author": "team 20",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cfgsept2021/team-20/issues"
+  },
+  "homepage": "https://github.com/cfgsept2021/team-20#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  }
+}
