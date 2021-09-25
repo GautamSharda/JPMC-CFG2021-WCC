@@ -58,7 +58,7 @@ const App = (props) => {
       </div>   
       <ul>
         {postsToShow.map((post) => (
-          <userPost
+          <Post
             key={post.id}
             post={post}
             toggleImportance={() => toggleImportanceOf(post.id)}
