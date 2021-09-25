@@ -14,7 +14,7 @@ export default class WCCPost extends Component {
       <Comment username="user3" text="text3" />,
     ];
     return (
-      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+      <Card sx={{ minWidth: 275, maxWidth: 400 }} style={{ margin: "20px" }}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             {this.props.title}
