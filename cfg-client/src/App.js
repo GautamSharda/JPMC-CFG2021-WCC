@@ -70,7 +70,7 @@ const App = (props) => {
         style={{
           position: "absolute",
           left: "50%",
-          top: "100%",
+          top: "50%",
           transform: "translate(-50%, -50%)",
           margin: "5px",
         }}
