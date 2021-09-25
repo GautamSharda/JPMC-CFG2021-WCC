@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Post from "./components/Post";
 import postService from "./services/posts";
 import axios from "axios";
-
+import WCCFeed from "./components/WCCFeed.js";
 const App = (props) => {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState("");
@@ -61,6 +61,7 @@ const App = (props) => {
         <input value={newPost} onChange={handlePostChange} />
         <button type="submit">Post</button>
       </form>
+      <WCCFeed />
     </div>
   );
 };
