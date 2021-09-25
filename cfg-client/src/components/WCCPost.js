@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
-import { Paper } from "@material-ui/core";
 
 export default class WCCPost extends Component {
   render() {
@@ -15,31 +14,30 @@ export default class WCCPost extends Component {
       <Comment username="user3" text="text3" />,
     ];
     return (
-      <Paper style={{ padding: "40px 20px" }}>
-        <Card sx={{ minWidth: 275, maxWidth: 400 }}>
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              {this.props.title}
-            </Typography>
+      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {this.props.title}
+          </Typography>
 
-            <Typography variant="body2">{this.props.text}</Typography>
-          </CardContent>
-          <CardActions>
-            <Button href={this.props.link} target="_blank" size="small">
-              Learn More
-            </Button>
-          </CardActions>
+          <Typography variant="body2">{this.props.text}</Typography>
+        </CardContent>
+        <CardActions>
+          <Button href={this.props.link} target="_blank" size="small">
+            Learn More
+          </Button>
+        </CardActions>
+        <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             Comments
           </Typography>
-          <Typography variant="body2" style={{ padding: "20px 20px" }}>
-            {comments.map((comment, index) => (
-              <span key={index}>{comment}</span>
-            ))}
-          </Typography>
-        </Card>
-      </Paper>
+        </CardContent>
+        <Typography variant="body2" style={{ padding: "20px 20px" }}>
+          {comments.map((comment, index) => (
+            <span key={index}>{comment}</span>
+          ))}
+        </Typography>
+      </Card>
     );
   }
 }
-
