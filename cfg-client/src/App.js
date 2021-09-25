@@ -3,6 +3,7 @@ import Post from "./components/Post";
 import postService from "./services/posts";
 import axios from "axios";
 import WCCFeed from "./components/WCCFeed.js";
+import Sidebar from "./components/Sidebar.js"
 const App = (props) => {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState("");
@@ -47,6 +48,7 @@ const App = (props) => {
 
   return (
     <div>
+      <Sidebar></Sidebar>
       <h1>posts</h1>
       <ul>
         {postsToShow.map((post) => (
