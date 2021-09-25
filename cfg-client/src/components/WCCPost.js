@@ -10,7 +10,7 @@ export default class WCCPost extends Component {
     ];
     return (
       <div>
-        <h1>{this.props.title}</h1>
+        <h2>{this.props.title}</h2>
         <img alt="image"></img>
         <p>{this.props.text}</p>
         {comments.map((comment, index) => (
