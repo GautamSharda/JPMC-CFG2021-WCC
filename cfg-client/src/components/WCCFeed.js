@@ -7,7 +7,7 @@ export default class WCCFeed extends Component {
     let posts = [
       <WCCPost
         title="Citywide guide: Resources and Services"
-        text="searching for jobs or schools, child care or health care, food or transportation, users can initiate custom searches by typing in key words. "
+        text="Searching for jobs or schools, child care or health care, food or transportation, users can initiate custom searches by typing in key words. "
         link="https://resourceguide.wccny.org/"
       />,
       <WCCPost

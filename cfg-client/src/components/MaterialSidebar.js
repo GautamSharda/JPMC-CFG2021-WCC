@@ -15,7 +15,11 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import AccessibilityIcon from "@mui/icons-material/Accessibility";
+import PolicyIcon from "@mui/icons-material/Policy";
+import PublicIcon from "@mui/icons-material/Public";
 import Post from "./Post.js";
+import Givism from "../givism.png";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -28,30 +32,19 @@ function ResponsiveDrawer(props) {
 
   const drawer = (
     <div>
-      <Toolbar />
-      <Divider />
       <List>
-        {["Policy", "Sustainability", "Community Service", ""].map(
-          (text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          )
-        )}
-      </List>
-      <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        <ListItem button key="Policy">
+          <ListItemIcon>{<PolicyIcon />}</ListItemIcon>
+          <ListItemText primary="Policy" />
+        </ListItem>
+        <ListItem button key="Sustainibility">
+          <ListItemIcon>{<PublicIcon />}</ListItemIcon>
+          <ListItemText primary="Sustainibility" />
+        </ListItem>
+        <ListItem button key="Community Service">
+          <ListItemIcon>{<AccessibilityIcon />}</ListItemIcon>
+          <ListItemText primary="Community Service" />
+        </ListItem>
       </List>
     </div>
   );
@@ -80,7 +73,7 @@ function ResponsiveDrawer(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            <img src={Givism} alt="Givism logo"></img>
           </Typography>
         </Toolbar>
       </AppBar>
