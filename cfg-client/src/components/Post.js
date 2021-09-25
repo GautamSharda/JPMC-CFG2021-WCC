@@ -8,16 +8,14 @@ import { Paper } from "@material-ui/core";
 const Post = ({ post, toggleImportance }) => {
   const label = post.important ? "make not important" : "make important";
   return (
-    <Paper style={{ padding: "40px 20px" }}>
-      <Card sx={{ minWidth: 275, maxWidth: 400 }}>
-        <CardContent>
-          <li>
-            {post.content}
-            <Button onClick={toggleImportance}>{label}</Button>
-            </li>
-        </CardContent>
-      </Card>
-    </Paper>
+    <Card sx={{ minWidth: 275, maxWidth: 400 }} style={{ margin: "20px" }}>
+      <CardContent>
+        <li>
+          {post.content}
+          <Button onClick={toggleImportance}>{label}</Button>
+        </li>
+      </CardContent>
+    </Card>
   );
 };
 
