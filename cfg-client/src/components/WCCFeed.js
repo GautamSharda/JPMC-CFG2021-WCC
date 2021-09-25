@@ -35,3 +35,4 @@ export default class WCCFeed extends Component {
     );
   }
 }
+

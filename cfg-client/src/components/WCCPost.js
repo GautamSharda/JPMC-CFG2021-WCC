@@ -42,3 +42,4 @@ export default class WCCPost extends Component {
     );
   }
 }
+

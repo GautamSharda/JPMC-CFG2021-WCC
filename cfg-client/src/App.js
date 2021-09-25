@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import Post from "./components/Post";
-import postService from "./services/posts";
-import axios from "axios";
+import React, { useState, useEffect } from 'react'
+import Post from './components/Post'
+import postService from './services/posts'
 import WCCFeed from "./components/WCCFeed.js";
+import Sidebar from "./components/Sidebar.js";
+import axios from 'axios'
+
 const App = (props) => {
   const [posts, setPosts] = useState([]);
   const [newPost, setNewPost] = useState("");
@@ -47,7 +49,13 @@ const App = (props) => {
 
   return (
     <div>
+      <Sidebar></Sidebar>
       <h1>posts</h1>
+      <div>
+        <button onClick={() => setShowAll(!showAll)}>
+          show {showAll ? 'important' : 'all' }
+        </button>
+      </div>   
       <ul>
         {postsToShow.map((post) => (
           <userPost
@@ -61,7 +69,7 @@ const App = (props) => {
         <input value={newPost} onChange={handlePostChange} />
         <button type="submit">Post</button>
       </form>
-      <WCCFeed />
+      <WCCFeed />  
     </div>
   );
 };
