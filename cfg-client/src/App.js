@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Post from './components/Post'
 import postService from './services/posts'
+import WCCFeed from "./components/WCCFeed.js";
+import Sidebar from "./components/Sidebar.js";
 import axios from 'axios'
 
 
@@ -59,10 +61,16 @@ const App = (props) => {
 
   return (
     <div>
+      <Sidebar></Sidebar>
       <h1>posts</h1>
+      <div>
+        <button onClick={() => setShowAll(!showAll)}>
+          show {showAll ? 'important' : 'all' }
+        </button>
+      </div>   
       <ul>
         {postsToShow.map(post => 
-            <userPost 
+            <Post 
               key={post.id}
               post={post}
               toggleImportance={() => toggleImportanceOf(post.id)} 
@@ -75,7 +83,8 @@ const App = (props) => {
           onChange={handlePostChange}
         />
         <button type="submit">Post</button>
-      </form>  
+      </form>
+      <WCCFeed />  
     </div>
   )
 }
