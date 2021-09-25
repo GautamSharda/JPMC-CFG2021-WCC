@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import Post from './components/Post'
-import postService from './services/posts'
+import React, { useState, useEffect } from "react";
+import Post from "./components/Post";
+import postService from "./services/posts";
 import WCCFeed from "./components/WCCFeed.js";
 import Sidebar from "./components/Sidebar.js";
 import MaterialSidebar from "./components/MaterialSidebar.js";
 import axios from 'axios'
+
 
 const App = (props) => {
   const [posts, setPosts] = useState([]);
@@ -73,7 +74,8 @@ const App = (props) => {
         <input value={newPost} onChange={handlePostChange} />
         <button type="submit">Post</button>
       </form>
-      <WCCFeed />  
+
+      <WCCFeed />
     </div>
   );
 };
