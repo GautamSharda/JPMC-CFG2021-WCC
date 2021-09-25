@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import WCCPost from "./WCCPost";
+import { Grid } from "@mui/material";
 
 export default class WCCFeed extends Component {
   render() {
@@ -16,18 +17,19 @@ export default class WCCFeed extends Component {
       />,
       <WCCPost
         title="Why YOU should be civically engaged"
-        text="Onset of pandemic results in job loss for women, lack of paid leave ofr moms of color, low-paying healthcare jobs for women of color
+        text="Onset of pandemic results in job loss for women, lack of paid leave for moms of color, low-paying healthcare jobs for women of color
               "
         link="https://wccny.org/wp-content/uploads/2021/08/WCC-Annual-Report_2020_FINAL_b.pdf"
       />,
     ];
     return (
-      <div>
+      <div style={{ float: `right` }}>
         {posts.map((post, index) => (
-          <span key={index}>{post}</span>
+          <Grid item>
+            <span key={index}>{post}</span>
+          </Grid>
         ))}
       </div>
     );
   }
 }
-

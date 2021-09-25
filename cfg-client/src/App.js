@@ -3,6 +3,7 @@ import Post from './components/Post'
 import postService from './services/posts'
 import WCCFeed from "./components/WCCFeed.js";
 import Sidebar from "./components/Sidebar.js";
+import MaterialSidebar from "./components/MaterialSidebar.js";
 import axios from 'axios'
 
 const App = (props) => {
@@ -49,14 +50,16 @@ const App = (props) => {
 
   return (
     <div>
-      <Sidebar></Sidebar>
+      <MaterialSidebar></MaterialSidebar>
       <h1>posts</h1>
       <div>
-        <button onClick={() => setShowAll(!showAll)}>
+        <button onClick={() => setShowAll(!showAll)} style={{ position: 'absolute', left: '35%', top:'50%',
+        transform: 'translate(-50%, -50%)' }}>
           show {showAll ? 'important' : 'all' }
         </button>
       </div>   
-      <ul>
+      <ul style={{ position: 'absolute', left: '50%', top:'100%',
+        transform: 'translate(-50%, -50%)', margin: '5px' }}>
         {postsToShow.map((post) => (
           <Post
             key={post.id}
@@ -65,7 +68,8 @@ const App = (props) => {
           />
         ))}
       </ul>
-      <form onSubmit={addPost}>
+      <form onSubmit={addPost} style={{         position: 'absolute', left: '30%',
+        transform: 'translate(-50%, -50%)', margin: '5px' }}>
         <input value={newPost} onChange={handlePostChange} />
         <button type="submit">Post</button>
       </form>
