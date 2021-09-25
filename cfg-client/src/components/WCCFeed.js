@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import WCCPost from "./WCCPost";
+import { Grid } from "@mui/material";
 
 export default class WCCFeed extends Component {
   render() {
@@ -23,9 +24,13 @@ export default class WCCFeed extends Component {
     ];
     return (
       <div>
-        {posts.map((post, index) => (
-          <span key={index}>{post}</span>
-        ))}
+        <Grid container spacing={10} justify="flex-end">
+          {posts.map((post, index) => (
+            <Grid item>
+              <span key={index}>{post}</span>
+            </Grid>
+          ))}
+        </Grid>
       </div>
     );
   }
