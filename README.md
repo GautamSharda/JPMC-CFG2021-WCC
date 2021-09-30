@@ -1,3 +1,3 @@
-# team-20
+# MVP
 Demo our mvp!
 https://boiling-retreat-83943.herokuapp.com/
